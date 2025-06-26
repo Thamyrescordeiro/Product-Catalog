@@ -1,0 +1,192 @@
+.mainHeader {
+  background-color: var(--color-primary);
+  height: 70px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logoText {
+  display: flex;
+  align-items: center;
+}
+
+.logoText h1 {
+  font-weight: 700;
+  font-size: 28px;
+  margin: 0;
+  white-space: nowrap;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #ffffff, #b0e0e6, #87ceeb, #ffffff);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: logoGradientAnimation 5s ease infinite;
+}
+
+.desktopNav {
+  display: none;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.inactiveLink,
+.activeLink {
+  font-weight: 700;
+  font-size: 16px;
+  padding-bottom: 5px;
+  transition: all 0.2s;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.inactiveLink {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.activeLink {
+  color: var(--white);
+}
+
+.desktopNav .activeLink {
+  border-bottom: 2px solid var(--white);
+}
+
+.inactiveLink:hover {
+  color: var(--white);
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cartIconWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.cartLinkContainerMobile {
+  position: relative;
+}
+
+.cartLinkContainerMobile .inactiveLink {
+  padding: 0;
+}
+
+.cartLinkContainerMobile .inactiveLink svg {
+  color: var(--white);
+}
+
+.cartBadge {
+  position: absolute;
+  top: -10px;
+  right: -8px;
+  background-color: var(--red);
+  color: var(--white);
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburgerButton {
+  display: block;
+}
+
+.hamburgerButton button {
+  background: none;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.mobileNav {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-primary);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 1rem 0;
+  z-index: 100;
+}
+
+.mobileNavList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.mobileNavList li a {
+  display: block;
+  padding: 1rem;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+@keyframes logoGradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .mainHeader {
+    padding: 0 40px;
+  }
+  .logoText h1 {
+    font-size: 38px;
+  }
+  .desktopNav {
+    display: block;
+  }
+  .hamburgerButton {
+    display: none;
+  }
+  .mobileNav {
+    display: none;
+  }
+  .inactiveLink,
+  .activeLink {
+    font-size: 18px;
+  }
+  .navList {
+    gap: 40px;
+  }
+  .cartLinkContainerMobile {
+    display: none;
+  }
+}
