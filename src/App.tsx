@@ -2,12 +2,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { FavoritesProvider } from "./contexts/FavoritesContext";
 import { CartProvider } from "./contexts/CartContext";
 
-import Header from "./components/Header";
-import LandingPage from "./pages/LandingPage";
-import CatalogPage from "./pages/CatalogPage";
-import FavoritesPage from "./pages/FavoritesPage";
-import ProductDetailPage from "./pages/ProductDetailPage";
-import CartPage from "./pages/CartPage";
+import Header from "./components/header/Header";
+import LandingPage from "./pages/landingPage/LandingPage";
+import CatalogPage from "./pages/catalogPage/CatalogPage";
+import FavoritesPage from "./pages/favoritesPage/FavoritesPage";
+import ProductDetailPage from "./pages/productDetailPage/ProductDetailPage";
+import CartPage from "./pages/CartPage/CartPage";
+import OrderHistoryPage from "./pages/OrderHistoryPage/OrderHistoryPage"; // Importar nova página
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
               <Route path="/favorites" element={<FavoritesPage />} />
               <Route path="/product/:id" element={<ProductDetailPage />} />
               <Route path="/cart" element={<CartPage />} />
+              <Route path="/orders" element={<OrderHistoryPage />} />{" "}
+              {/* NOVA ROTA */}
             </Routes>
           </main>
         </Router>

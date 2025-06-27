@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { mockProducts } from "../data/products";
-import ProductCard from "../components/ProductCard";
+import { mockProducts } from "../../data/products";
+import ProductCard from "../../components/productCard/ProductCard";
 import styles from "./CatalogPage.module.css";
 
 function CatalogPage() {

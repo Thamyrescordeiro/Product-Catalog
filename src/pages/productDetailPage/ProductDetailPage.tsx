@@ -1,12 +1,13 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { mockProducts } from "../data/products";
+import { mockProducts } from "../../data/products";
 import styles from "./ProductDetailPage.module.css";
 import { IoArrowBack } from "react-icons/io5";
+import type { Product } from "../../types/CartAndOrderTypes";
 
 function ProductDetailPage() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const product = mockProducts.find((p) => p.id === Number(id));
+  const product = mockProducts.find((p: Product) => p.id === Number(id));
 
   if (!product) {
     return (

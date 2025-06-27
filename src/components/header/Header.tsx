@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FiMenu, FiX, FiShoppingCart, FiHeart } from "react-icons/fi";
+import { IoReceipt } from "react-icons/io5";
 import styles from "./Header.module.css";
 
-import { useCart } from "../contexts/CartContext";
+import { useCart } from "../../contexts/CartContext";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { totalCartItems } = useCart();
+  const { totalCartItems } = useCart(); // Correção: de cartTotal para totalCartItems
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -20,8 +21,7 @@ const Header: React.FC = () => {
   return (
     <header className={styles.mainHeader}>
       <div className={styles.logoText}>
-        {/* LOGO AGORA É TEXTO */}
-        <NavLink to="/">
+        <NavLink to="/" onClick={closeMenu}>
           <h1>JTSHOP</h1>
         </NavLink>
       </div>
@@ -49,6 +49,16 @@ const Header: React.FC = () => {
             </NavLink>
           </li>
           <li>
+            <NavLink
+              to="/orders"
+              className={({ isActive }) =>
+                isActive ? styles.activeLink : styles.inactiveLink
+              }
+            >
+              <IoReceipt size={18} /> MEUS PEDIDOS
+            </NavLink>
+          </li>
+          <li className={styles.cartLinkContainer}>
             <NavLink
               to="/cart"
               className={({ isActive }) =>
@@ -106,6 +116,11 @@ const Header: React.FC = () => {
             <li>
               <NavLink to="/favorites" onClick={closeMenu}>
                 FAVORITOS
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/orders" onClick={closeMenu}>
+                MEUS PEDIDOS
               </NavLink>
             </li>
             <li>

@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import type { Product } from "../types/Product";
+import type { Product } from "../../types/CartAndOrderTypes";
 import styles from "./ProductCard.module.css";
-import { useFavorites } from "../contexts/FavoritesContext";
-import { useCart } from "../contexts/CartContext";
+import { useFavorites } from "../../contexts/FavoritesContext";
+import { useCart } from "../../contexts/CartContext";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import "./CartPopup.css";
-
+import "../../styles/CartPopup.css";
 interface ProductCardProps {
   product: Product;
 }

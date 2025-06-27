@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import { useFavorites } from "../contexts/FavoritesContext";
-import ProductCard from "../components/ProductCard";
+import { useFavorites } from "../../contexts/FavoritesContext";
+import ProductCard from "../../components/productCard/ProductCard";
 import styles from "./FavoritesPage.module.css";
 import { IoArrowBack } from "react-icons/io5";
 

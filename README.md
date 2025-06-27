@@ -105,7 +105,22 @@ Lista de produtos marcados como favoritos pelo usuário.
 
 ![Meus Favoritos](src/assets/meusFavoritos.jpeg)
 
-#### **6. Design Responsivo (Mobile) **
+#### **6. Histórico de Pedidos **
+
+Visualização de pedidos realizados e cancelados em abas interativas, com opção de cancelamento e detalhes do pedido.
+
+<p align="center">
+  <img src="src/assets/pedidosRealizados.png" alt="Layout Responsivo 1" width="45%" />
+  <img src="src/assets/pedidosCancelados.png" alt="Layout Responsivo 2" width="45%" />
+</p>
+
+#### **7. Modal de Confirmação de Cancelamento **
+
+Uma janela modal para o usuário confirmar o cancelamento de um pedido.
+
+![Modal de Cancelamento](src/assets/modalCancelamento.png)
+
+#### **8. Design Responsivo (Mobile) **
 
 Exemplo de como a aplicação se adapta para telas menores, incluindo o menu "hambúrguer" no cabeçalho.
 

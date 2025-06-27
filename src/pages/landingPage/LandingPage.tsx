@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./LandingPage.module.css";
-import mainImage from "../assets/inicio.png";
+import mainImage from "../../assets/inicio.png";
 
 function LandingPage() {
   return (

@@ -1,0 +1,223 @@
+.cartPageContainer {
+  padding: 2rem 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.headerSection { /* Estilo para o container do botão e título */
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 2rem;
+}
+
+h1 { /* Título do carrinho */
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0; /* Remover margem padrão do h1 para alinhamento */
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  transition: color 0.2s;
+}
+
+.backButton:hover {
+  color: var(--color-primary);
+}
+
+.cartContent {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+.cartItems {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: var(--white);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  flex-wrap: wrap;
+}
+
+.itemImage {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+
+.itemDetails {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 150px;
+}
+
+.itemDetails h3 {
+  font-weight: 700;
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.itemDetails p {
+  color: var(--text-secondary);
+  margin: 0;
+  font-size: 1rem;
+}
+
+.quantityControl {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.quantityControl button {
+  background: #f0f0f0;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  transition: background-color 0.2s;
+}
+
+.quantityControl button:hover {
+  background-color: #e0e0e0;
+}
+
+.quantityControl span {
+  font-weight: 700;
+  min-width: 20px;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.removeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--red);
+  margin-left: 10px;
+  flex-shrink: 0;
+}
+
+.removeButton:hover {
+  color: #a00;
+}
+
+.cartSummary {
+  background: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.cartSummary h2, .cartSummary h3 {
+  margin-top: 0;
+  color: var(--text-primary);
+}
+
+.cartTotal {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 700;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 15px;
+  color: var(--text-primary);
+}
+
+.customerForm input {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #E1E1E1;
+  padding: 0 15px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: var(--text-primary);
+  font-family: 'Poppins', sans-serif;
+}
+
+.customerForm input::placeholder {
+  color: var(--text-secondary);
+}
+
+.finishButton {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background: #25D366;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.finishButton:hover {
+  background: #128C7E;
+}
+
+@media (max-width: 992px) {
+  .cartContent {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .cartItem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .quantityControl {
+    margin-left: 0;
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  .removeButton {
+    margin-left: 0;
+    width: 100%;
+    text-align: right;
+  }
+}
