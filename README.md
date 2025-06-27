@@ -34,9 +34,19 @@ O JTSHOP oferece uma experiência de usuário rica com as seguintes funcionalida
   - Remoção de itens específicos do carrinho.
   - Cálculo do valor total do pedido.
   - Persistência dos itens do carrinho no Local Storage.
+  - Botão "Voltar" para navegação.
 - **Checkout Simplificado com WhatsApp:**
   - Formulário para o cliente informar nome e telefone.
   - Botão "FINALIZAR COMPRA NO WHATSAPP" que gera um link direto para o WhatsApp com o resumo completo do pedido e dados do cliente.
+- **Histórico de Pedidos:**
+  - Visualização de todos os pedidos realizados, salvos no Local Storage.
+  - Organização interativa por abas: "Pedidos Realizados" e "Pedidos Cancelados".
+  - Botão "Voltar" para navegação.
+- **Solicitação de Cancelamento de Pedido:**
+  - Opção para cancelar um pedido diretamente da lista de "Pedidos Realizados".
+  - Prompt para o usuário digitar uma mensagem opcional de cancelamento.
+  - Envio de mensagem via WhatsApp para o lojista, informando o cancelamento do pedido (com ID e itens), e a mensagem do cliente.
+  - Atualização do status do pedido para "Cancelado" e movimentação para a aba "Pedidos Cancelados".
 
 ## Tecnologias Utilizadas
 
@@ -50,7 +60,7 @@ Este projeto foi construído utilizando as seguintes tecnologias e conceitos:
   - **React Icons:** Biblioteca de ícones (carrinho, coração, menu, etc.).
   - **Context API:** Para gerenciamento de estado global (favoritos e carrinho), evitando o "prop drilling".
   - **Hooks Customizados:** Para abstrair lógicas de contexto e outras funcionalidades reutilizáveis.
-  - **Local Storage API:** Para persistência de dados no lado do cliente (favoritos e carrinho).
+  - **Local Storage API:** Para persistência de dados no lado do cliente (favoritos, carrinho e histórico de pedidos).
 - **Ferramentas:**
   - **Vite:** Ferramenta de build rápida e leve para projetos frontend.
   - **Git:** Sistema de controle de versão.
@@ -67,9 +77,10 @@ O projeto foi desenvolvido com foco em:
   - Animações de gradiente dinâmicas na logo "JTSHOP" e no botão principal da Landing Page.
   - Animação de feedback ao adicionar produtos ao carrinho (popup).
   - Efeitos de hover interativos nos cards de produtos.
-- **Gerenciamento de Estado Eficiente:** Uso estratégico da Context API para estados que precisam ser acessíveis globalmente.
-- **Persistência de Dados no Cliente:** Melhoria significativa na experiência do usuário ao manter favoritos e itens do carrinho após recarregar a página.
-- **Integração do Mundo Real:** A funcionalidade de checkout via WhatsApp simula uma aplicação prática de negócio.
+  - Transições suaves de abas e modais na página de Pedidos.
+- **Gerenciamento de Estado Eficiente:** Uso estratégico da Context API para estados que precisam ser acessíveis globalmente (carrinho, favoritos, histórico de pedidos).
+- **Persistência de Dados no Cliente:** Melhoria significativa na experiência do usuário ao manter favoritos, itens do carrinho e histórico de pedidos após recarregar a página.
+- **Integração do Mundo Real:** A funcionalidade de checkout e cancelamento de pedidos via WhatsApp simula uma aplicação prática de negócio.
 
 ## Capturas de Tela / Demonstração
 
