@@ -109,9 +109,9 @@ Lista de produtos marcados como favoritos pelo usuário.
 
 Exemplo de como a aplicação se adapta para telas menores, incluindo o menu "hambúrguer" no cabeçalho.
 
-<img src="src/assets/menuResponsivo.jpeg" alt="Layout Responsivo - Parte 1" style="display: inline-block; width: 49%; margin: 0.5%;">
-<img src="src/assets/menuResponsivo2.jpeg" alt="Layout Responsivo - Parte 2" style="display: inline-block; width: 49%; margin: 0.5%;">
-<br>
+<p align="center">
+  <img src="src/assets/menuResponsivo.jpeg" alt="Layout Responsivo 1" width="45%" />
+  <img src="src/assets/menuResponsivo2.jpeg" alt="Layout Responsivo 2" width="45%" />
+</p>
 
 ---
-
